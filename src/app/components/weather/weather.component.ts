@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule], 
   template: `
     <input [(ngModel)]="city" placeholder="Enter city" />
     <button (click)="fetchWeather()">Get Weather</button>
