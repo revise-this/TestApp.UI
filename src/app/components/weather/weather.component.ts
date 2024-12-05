@@ -6,16 +6,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-weather',
   standalone: true,
-  imports: [FormsModule, CommonModule], 
-  template: `
-    <input [(ngModel)]="city" placeholder="Enter city" />
-    <button (click)="fetchWeather()">Get Weather</button>
-    <div *ngIf="weather">
-      <h3>Weather in {{ city }}</h3>
-      <p>Temperature: {{ weather.main.temp }}°C</p>
-      <p>Condition: {{ weather.weather[0].description }}</p>
-    </div>
-  `
+  imports: [FormsModule, CommonModule],
+  templateUrl: './weather.component.html', 
+  styleUrls: ['./weather.component.css']  
 })
 export class WeatherComponent implements OnInit {
   city: string = '';

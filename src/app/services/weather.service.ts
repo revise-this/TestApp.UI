@@ -9,6 +9,6 @@ export class WeatherService {
   private apiKey = '78cffec94777fcf6fc9eb10a02cca72b';
 
   getWeather(city: string) {
-    return axios.get(`${this.apiUrl}?q=${city}&appid=${this.apiKey}`);
+    return axios.get(`${this.apiUrl}?q=${city}&appid=${this.apiKey}&units=imperial`);
   }
 }
